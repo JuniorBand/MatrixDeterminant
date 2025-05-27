@@ -23,12 +23,14 @@ public class CalculateDet {
             byte N = (byte) matrix[0].length; //downcasting (int -> byte)
 
             double det = calculateDet(matrix, N); //calculate determinant
+            String formatdet = String.format("%.5f", det); //if you want a specific format
+
 
             for (byte i = 0; i < N; i++) {
                 System.out.println(Arrays.toString(matrix[i])); //print each row
             }
 
-            System.out.println("Determinante: " + det);
+            System.out.println("Determinante: " + formatdet);//print det or formatdet
             if (det == 0) {
                 System.out.println("Vetores L.D.");
             } else {
