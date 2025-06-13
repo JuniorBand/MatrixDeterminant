@@ -2,9 +2,11 @@ package src;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Método de Laplace
+
 public class CalculateDet {
 
-    public CalculateDet()  throws RuntimeException{
+    public static void run()  throws RuntimeException{
         try {
             Scanner scan = new Scanner(System.in);
 
