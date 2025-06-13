@@ -17,13 +17,13 @@ public class CalculateDet2 {
 
             for (int vet = 0; vet < dim; vet++) {
                 for (int i = 0; i < dim; i++) {
-                    System.out.println("Insira a coordenada (" + (i + 1) + ") do seu vetor (" + (vet + 1) + ") :");
+                    System.out.println("Insira a (" + (i + 1) + "º) coordenada do seu vetor (" + (vet + 1) + ") :");
                     matrix[i][vet] = scan.nextDouble();
                 }
             }
 
             byte N = (byte) matrix[0].length; //downcasting (int -> byte)
-            System.out.println("Matriz:");
+            System.out.println("\nMatriz:");
             for (byte i = 0; i < N; i++) {
                 System.out.println(Arrays.toString(matrix[i])); //print each row
             }
@@ -33,13 +33,13 @@ public class CalculateDet2 {
             if(formatdet.equals("-0.00000")){formatdet = "0.00000";}
 
             if (N != 1) {
-                System.out.println("Matriz Escalonada:");
+                System.out.println("\nMatriz Escalonada:");
                 for (byte i = 0; i < N; i++) {
                     System.out.println(Arrays.toString(matrix[i])); //print each row
                 }
             }
 
-            System.out.println("Determinante: " + formatdet);//print det or formatdet
+            System.out.println("\nDeterminante: " + formatdet);//print det or formatdet
             if (det == 0) {
                 System.out.println("Vetores L.D.");
             } else {
@@ -47,7 +47,7 @@ public class CalculateDet2 {
             }
 
         } catch(RuntimeException e){
-            System.out.println("Erro inesperado! Tente novamente");
+            System.out.println("\nErro inesperado! Tente novamente");
             new CalculateDet2();
         }
     }

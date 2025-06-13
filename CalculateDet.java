@@ -18,7 +18,7 @@ public class CalculateDet {
 
             for (int vet = 0; vet < dim; vet++) {
                 for (int i = 0; i < dim; i++) {
-                    System.out.println("Insira a coordenada (" + (i + 1) + ") do seu vetor (" + (vet + 1) + ") :");
+                    System.out.println("Insira a (" + (i + 1) + "º) coordenada do seu vetor (" + (vet + 1) + ") :");
                     matrix[i][vet] = scan.nextDouble();
                 }
             }
@@ -28,34 +28,20 @@ public class CalculateDet {
             double det = calculateDet(matrix, N); //calculate determinant
             String formatdet = String.format("%.5f", det); //if you want a specific format
 
-
+            System.out.println("\nMatriz:");
             for (byte i = 0; i < N; i++) {
                 System.out.println(Arrays.toString(matrix[i])); //print each row
             }
 
-            System.out.println("Determinante: " + formatdet);//print det or formatdet
+            System.out.println("\nDeterminante: " + formatdet);//print det or formatdet
             if (det == 0) {
                 System.out.println("Vetores L.D.");
             } else {
                 System.out.println("Vetores L.I.");
             }
 
-            System.out.println("Deseja continuar: Não (qualquer tecla) ou Sim (1)?");
-
-            try {
-                byte resp = scan.nextByte();
-                if (resp == 1) {
-                    new CalculateDet();
-                }
-                scan.close();
-                return;
-            } catch (RuntimeException e){ //if not a byte
-                scan.close();
-                return;
-            }
-
         } catch(RuntimeException e){
-            System.out.println("Erro inesperado! Tente novamente");
+            System.out.println("\nErro inesperado! Tente novamente");
             new CalculateDet();
         }
     }
