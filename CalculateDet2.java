@@ -33,7 +33,7 @@ public class CalculateDet2 {
                 System.out.println(Arrays.toString(matrix[i])); //print each row
             }
 
-            double det = calculateDet2(matrix, N); //calculate determinant
+            double det = calculateDet2(matrix); //calculate determinant
             String formatdet = String.format("%.5f", det); //if you want a specific format
             if(formatdet.equals("-0.00000")){formatdet = "0.00000";}
 
@@ -53,12 +53,12 @@ public class CalculateDet2 {
 
         } catch(RuntimeException e){
             System.out.println("\nErro inesperado! Tente novamente");
-            new CalculateDet2();
+            CalculateDet2.run();
         }
     }
 
-    private static double calculateDet2 (double[][] matrix, byte N) {
-        N = (byte) matrix[0].length; //matrix dimension
+    private static double calculateDet2 (double[][] matrix) {
+        byte N = (byte) matrix[0].length; //matrix dimension
         double det = 0;
 
         // 1st line is fixed, it is not gonna be altered.

@@ -47,7 +47,7 @@ public class CalculateDet {
 
         } catch(RuntimeException e){
             System.out.println("\nErro inesperado! Tente novamente");
-            new CalculateDet();
+            CalculateDet.run();
         }
     }
 
