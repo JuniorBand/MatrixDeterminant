@@ -30,7 +30,7 @@ public class CalculateDet {
 
             byte N = (byte) matrix[0].length; //downcasting (int -> byte)
 
-            double det = calculateDet(matrix, N); //calculate determinant
+            double det = calculateDet(matrix); //calculate determinant
             String formatdet = String.format("%.5f", det); //if you want a specific format
 
             System.out.println("\nMatriz:");
@@ -51,8 +51,8 @@ public class CalculateDet {
         }
     }
 
-    private static double calculateDet (double[][] matrix, byte N) {
-        N = (byte) matrix[0].length; //matrix dimension
+    private static double calculateDet (double[][] matrix) {
+        double N = (byte) matrix[0].length; //matrix dimension
         double det = 0;
 
         if (N == 1){ //matrix 1x1
@@ -74,8 +74,8 @@ public class CalculateDet {
         int col = 0;
 
         while(col < N){ //criando submatrix para calcular cofator de matrix[0][col]
-            double [][] sub_matrix = createSubMatrix(matrix,N);
-            det += sign * matrix[0][col] * calculateDet(sub_matrix, N);
+            double [][] sub_matrix = createSubMatrix(matrix);
+            det += sign * matrix[0][col] * calculateDet(sub_matrix);
             sign = ~sign + 1; //inverte o sign
             col++;
         }
@@ -84,8 +84,9 @@ public class CalculateDet {
         return det;
     }
 
-    private static double[][] createSubMatrix(double[][] matrix, byte N){
+    private static double[][] createSubMatrix(double[][] matrix){
 
+        byte N = (byte) matrix[0].length;
         double[][] sub_matrix = new double[N-1][N-1];
 
         for (int i=0; i < N-1; i++){ //copy elements to create the right submatrix

@@ -12,7 +12,7 @@ public class Linearity {
         byte resp = 1;
 
         while (resp == 1) {
-            CalculateDet2.run(); // Executa uma vez a lógica principal
+            CalculateDet.run(); // Executa uma vez a lógica principal
 
             System.out.println("\nDeseja continuar: Não (qualquer tecla) ou Sim (1)?");
             try {
