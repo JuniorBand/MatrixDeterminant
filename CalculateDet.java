@@ -14,6 +14,11 @@ public class CalculateDet {
             System.out.println("Usar espaço de quantas dimensões?");
             byte dim = scan.nextByte(); //dim is byte [-128, 127], bc more than that is insane
 
+            if(dim == 0){
+                System.out.println("\nDimensão nula!\nL.D.");
+                return;
+            }
+
             double[][] matrix = new double[dim][dim];
 
             for (int vet = 0; vet < dim; vet++) {
