@@ -1,4 +1,3 @@
-Note: the algorithm may not be as polished or have the best Big O notation as it could be/have, the structure came out of my mind like that.
 
 # The code has two ways of finding the determinant:
 
@@ -6,4 +5,5 @@ Note: the algorithm may not be as polished or have the best Big O notation as it
 
 ### The CalculateDet2 presents Big O notation of O(N^3) in time complexity, which is better, and it is based on the Gauss Elimination method to find determinants.
 
+If you to run it without downloading anything, run online with [Online GDB](https://onlinegdb.com/J68Y8BGEhO).
 
