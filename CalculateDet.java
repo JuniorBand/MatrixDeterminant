@@ -9,11 +9,11 @@ public class CalculateDet {
         try {
             Scanner scan = new Scanner(System.in);
 
-            System.out.println("Usar espaço de quantas dimensões?");
+            System.out.println("Space of how many dimensions?");
             byte dim = scan.nextByte(); //dim is byte [-128, 127], bc more than that is insane
 
             if(dim == 0){
-                System.out.println("\nDimensão nula!\nL.D.");
+                System.out.println("\n0-dimensional matrix!\nL.D.");
                 return;
             }
 
@@ -21,7 +21,7 @@ public class CalculateDet {
 
             for (int vet = 0; vet < dim; vet++) {
                 for (int i = 0; i < dim; i++) {
-                    System.out.println("Insira a (" + (i + 1) + "º) coordenada do seu vetor (" + (vet + 1) + ") :");
+                    System.out.println("Insert the (" + (i + 1) + "º) coordinate of your vector (" + (vet + 1) + ") :");
                     matrix[i][vet] = scan.nextDouble();
                 }
             }
@@ -31,20 +31,20 @@ public class CalculateDet {
             double det = calculateDet(matrix); //calculate determinant
             String formatdet = String.format("%.5f", det); //if you want a specific format
 
-            System.out.println("\nMatriz:");
+            System.out.println("\nMatrix:");
             for (byte i = 0; i < N; i++) {
                 System.out.println(Arrays.toString(matrix[i])); //print each row
             }
 
-            System.out.println("\nDeterminante: " + formatdet);//print det or formatdet
+            System.out.println("\nDeterminant: " + formatdet);//print det or formatdet
             if (det == 0) {
-                System.out.println("Vetores L.D.");
+                System.out.println("L.D. vectors.");
             } else {
-                System.out.println("Vetores L.I.");
+                System.out.println("L.I. vectors.");
             }
 
         } catch(RuntimeException e){
-            System.out.println("\nErro inesperado! Tente novamente");
+            System.out.println("\nUnexpected Error! Try again");
             CalculateDet.run();
         }
     }
