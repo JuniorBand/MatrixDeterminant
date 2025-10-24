@@ -7,12 +7,18 @@
 
 ## Reducing any matrix
 
-### Now you can row reduce any $m$ x $n$ matrix, just choose the option at the begining to reduce or find the determinant (using CalculateDet2).
+### You can row reduce any $m$ x $n$ matrix, just choose the option at the begining to reduce or find the determinant (using CalculateDet2).
+
+## Finding the inverse of a matrix
+
+### You can also find the inverse of any square matrix using the Gauss-Jordan elimination method (using CalculateDet2).
+
+## Run
 
 If you to run it without downloading anything, run online with [Online GDB](https://onlinegdb.com/J68Y8BGEhO).
-To run on your machine,go to the directory where you want to clone the repository and run the following commands:
+To run on your machine, go to the directory where you want to clone the repository and run the following commands:
 
-```javac *.java```
+```javac -d bin src/*.java```
 
-```java -cp . Linearity```
+```java -cp bin/. Linearity```
 
