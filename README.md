@@ -12,6 +12,8 @@
 ## Finding the inverse of a matrix
 
 ### You can also find the inverse of any square matrix using the Gauss-Jordan elimination method (using CalculateDet2).
+![alt text](<img/Captura de tela 2025-12-06 123714.png>)
+![alt text](<img/Captura de tela 2025-12-06 123605.png>)
 
 ## Run
 

@@ -191,7 +191,7 @@ public class CalculateDet2 {
         byte N = (byte) ech.length; // number of rows
         byte M = (byte) ech[0].length; // number of columns
 
-        // 1st line is fixed, it is not gonna be altered.
+        // 1st line (0) is fixed, it is not gonna be altered.
         int row = 1;
         byte counter = 0; // counts which pivot line we are on
         double last_pivot = 0;
